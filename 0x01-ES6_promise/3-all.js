@@ -1,6 +1,8 @@
-import { object } from "prop-types";
-import { uploadPhoto } from "./utils";
-import { createUser } from "./utils";
+import { 
+  uploadPhoto,
+  createUser,
+} from "./utils";
+
 function handleProfileSignup() {
   const prm1 = uploadPhoto();
   const prm2 = createUser();
