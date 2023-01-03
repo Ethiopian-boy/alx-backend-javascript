@@ -1,3 +1,7 @@
 export default function returnHowManyArguments(...rest) {
-  return rest.length();
+    let count = 0;
+    for (const iter of rest) {
+        count += 1;
+    }
+  return count;
 }
