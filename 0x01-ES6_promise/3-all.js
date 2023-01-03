@@ -1,7 +1,7 @@
 import { object } from "prop-types";
 import { uploadPhoto } from "./utils";
 import { createUser } from "./utils";
-export default function handleProfileSignup() {
+function handleProfileSignup() {
   const prm1 = uploadPhoto();
   const prm2 = createUser();
 
@@ -10,3 +10,5 @@ export default function handleProfileSignup() {
     console.log(`${result.body} ${result.firstName} ${result.lastName}`);
   }).catch(() => console.log('Signup system offline'));
 }
+
+export default handleProfileSignup;
