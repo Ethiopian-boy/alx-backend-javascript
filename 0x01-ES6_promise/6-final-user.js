@@ -8,7 +8,7 @@ async function handleProfileSignup(firstName, lastName, fileName) {
   const data = await Promise.allSettled([p1, p2]).then((results) => results.map((result) => {
     if (result.status !== 'fulfilled'){
         return {
-            status: rejected,
+            status: 'rejected',
             value: result.reason.tostring(),
         };
     }
