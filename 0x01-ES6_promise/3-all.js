@@ -3,7 +3,7 @@ import {
   createUser,
 } from './utils';
 
-function handleProfileSignup() {
+export default function handleProfileSignup() {
   const prm1 = uploadPhoto();
   const prm2 = createUser();
 
@@ -12,5 +12,3 @@ function handleProfileSignup() {
     console.log(`${result.body} ${result.firstName} ${result.lastName}`);
   }).catch(() => console.log('Signup system offline'));
 }
-
-export default handleProfileSignup;
