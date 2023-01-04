@@ -3,10 +3,10 @@ import Currency from './3-currency';
 class Pricing {
   constructor(amount, currency) {
     if (amount) {
-    this._amount = amount;
+      this._amount = amount;
     }
     if (currency instanceof Currency) {
-    this._currency = currency;
+      this._currency = currency;
     }
   }
 
