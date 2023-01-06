@@ -6,11 +6,11 @@ async function handleProfileSignup(firstName, lastName, fileName) {
   const p2 = uploadPhoto(fileName);
 
   const data = await Promise.allSettled([p1, p2]).then((results) => results.map((result) => {
-    if (result.status !== 'fulfilled'){
-        return {
-            status: rejected,
-            value: result.reason.tostring(),
-        };
+    if (result.status !== 'fulfilled') {
+      return {
+        status: 'rejected',
+        value: result.reason.toString(),
+      };
     }
     return result;
   }));
